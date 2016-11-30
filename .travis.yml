@@ -3,8 +3,10 @@ python:
   - "2.7"
   - "3.4"
 install:
-  - pip install pytest
+  - pip install coveralls
 before_script:
   - export PYTHONPATH='./'
 script:
-  - python -m pytest unittests/
+  - coverage run --source=src -m pytest unittests/
+after_success:
+  - coveralls
