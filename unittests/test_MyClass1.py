@@ -28,9 +28,22 @@ class TestMyClass1(unittest.TestCase):
         obj = MyClass1(-10, 2, 3)
         self.assertEqual(obj.getMin(), -10)
 
-    def test_max(self):
+    def test_max1(self):
         obj = MyClass1(1, 2, 3)
         self.assertEqual(obj.getMax(), 3)
+
+    def test_sum1(self):
+        obj = MyClass1(-1, 1, 0)
+        self.assertEqual(obj.getSum(), 0)
+
+    def test_sum2(self):
+        obj = MyClass1(10, 20, 30)
+        self.assertEqual(obj.getSum(), 60)
+
+    def test_mean1(self):
+        obj = MyClass1(10, 10, 10)
+        self.assertEqual(obj.getMean(), 10)
+
 
 if __name__ == '__main__':
     unittest.main()
