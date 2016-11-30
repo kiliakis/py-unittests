@@ -3,7 +3,8 @@ python:
   - "2.7"
   - "3.4"
 install:
+  - pip install pytest
 before_script:
   - export PYTHONPATH='./'
 script:
-  - pytest unittests/
+  - python -m pytest unittests/
